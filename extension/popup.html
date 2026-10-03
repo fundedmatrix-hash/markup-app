@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+  <body style="margin:0; padding:12px; width:300px; background:#0f172a; color:#f8fafc; font-family:Inter, sans-serif;">
+    <h3 style="margin:0 0 8px; font-size:16px;">MARKUP</h3>
+    <button id="toggle" style="width:100%; padding:10px; border:none; border-radius:10px; background:linear-gradient(135deg,#f97316,#fb7185); color:white; cursor:pointer;">Open overlay</button>
+    <script>
+      document.getElementById('toggle').addEventListener('click', () => {
+        chrome.runtime.sendMessage({ type: 'markup:toggle' });
+      });
+    </script>
+  </body>
+</html>
